@@ -10,7 +10,7 @@ import os
 app = Flask(__name__)
 
 # Load and validate environment variables
-openai_key = os.getenv("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")
+openai_key = os.getenv(OPENAI_API_KEY)
 if not openai_key:
     raise EnvironmentError("Missing OPENAI_API_KEY environment variable")
 openai.api_key = openai_key
